@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+US+Trad:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 body{
 	font-family: "Playwrite DE Grund", cursive !important;
-	
-
+	cursor: none;
 }
 
 .logo{
@@ -13,7 +12,13 @@ body{
 	padding: 7px;
 	margin-top: 10px;
 	margin-left: 10px;
+	transition: .3s;
+	&:hover{
+		transform: scale(1.1);
+		transition: .3s;
+	}
 }
+
 
 .section-1{
 	background-image: url("https://yasio.dev/assets/img/bg.87635d9.webp");
@@ -58,7 +63,7 @@ body{
 	bottom: 0;
 	left: 20px;
 	width: 2px;
-	height: 1000px;
+	height: 2500px;
 	background-color: #5918DF;
   }
   
@@ -88,7 +93,7 @@ body{
 /* components/WordRoller.module.css */
 .roller {
     display: inline-block;
-   
+   height: 50px !important;
 	
     overflow: hidden;
     position: relative;
@@ -127,33 +132,133 @@ body{
 	height: 1000px;
 }
 
+.cursor {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	 
+	pointer-events: none; /* Ensure the element doesn't interfere with mouse events */
+	transform: translate(-50%, -50%);
+	z-index: 1000; /* Ensure it is on top of other elements */
+  }
+  
+  .cursor::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6px; /* Adjust inner circle size as needed */
+	height: 6px; /* Adjust inner circle size as needed */
+	background-color: #fff; /* White inner circle */
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
 .codewrp{
-	font-family: Roboto Mono, Courier New, Courier, monospace !important;
+	
     font-size: 16px;
     line-height: 1.6;
+	
+	width: 100%;
+	padding: 5%;
+	background-color:#1d1a2a;	
 }
 
-.code-l{
-	position: relative;
-    z-index: 1;
+.codeBlock {
+	background-color: rgb(255, 222, 173, 0) !important;
+	color: #abb2bf;	
+	border-radius: 5px;
+	font-family: 'Fira Code', monospace;
+	font-size: 14px;
+	line-height: 1.5 !important;
+	overflow-x: auto;
+	padding-left: 500px !important;
 }
 
-.code-l ::after{
-	color: #3b3553;
-    content: attr(data-line-nr);
-    font-family: Roboto Mono, Courier New, Courier, monospace !important;
-    font-size: 16px;
-    left: -60px;
-    line-height: 1.6;
-    position: absolute;
-    top: 0;
-    z-index: 3;
-}
-.methods{
-	color: #5918df;
-    display: inline;
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a9955;
+  font-family: "Fira Code", monospace !important;
 }
 
-.propername{
-	color: #eeff31;
+.token.punctuation {
+  color: #abb2bf;
+  font-family: "Fira Code", monospace !important;
 }
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #e06c75;
+  font-family: "Fira Code", monospace !important;
+}
+
+.token.number{
+	color: rgb(211, 211, 211, 0.3) !important;
+}
+
+.token.boolean
+{
+  color: #d19a66;
+  font-family: "Fira Code", monospace !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #98c379;
+  font-family: "Fira Code", monospace !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #56b6c2;
+  font-family: "Fira Code", monospace !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #61afef;
+  font-family: "Fira Code", monospace !important;
+}
+
+.token.keyword {
+  color: #c678dd;
+  font-family: "Fira Code", monospace !important;
+}
+
+.token.regex,
+.token.important {
+  color: #c678dd;
+  font-family: "Fira Code", monospace !important;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+

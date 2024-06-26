@@ -17,7 +17,7 @@ function Section1() {
                 <div className="verticalLine"></div>
                 <div className="content">
                     <p className='point-sec'>start /></p>
-                    <h1>Hi, my name is <span className="highlight">Ahmed Haddaji</span></h1>      
+                    <h1>Hi, my name is <span className="highlight"><b>Ahmed Haddaji</b></span></h1>      
                     <h1><i>i design</i> and develop <b><Roller /></b></h1>
                     <h5 className='point-sec' style={{marginTop: 50}}>Let me show You...</h5>
                 </div>
