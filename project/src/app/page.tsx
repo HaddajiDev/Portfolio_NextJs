@@ -1,22 +1,15 @@
 "use client";
-
 import React, { useState, useEffect } from 'react';
+import Section1 from '@/components/TopSection/Section1';
+import Code from '@/components/TopSection/Code';
+import Section2 from '@/components/TopSection/Section2';
 
-import { motion, useAnimation } from 'framer-motion';
-
-export default function Home() {
-  const controls = useAnimation();
-  useEffect(() => {
-      controls.start({ opacity: 1 });
-  }, [controls]);
-  
+export default function Home() {  
   return (
     <div>
-      <motion.div>
-        
-      </motion.div>   
-      <h1>Ahmed</h1>
-      <h1>Ahmed</h1>
+      <Section1 />
+      <Section2 />
+      <Code />
     </div>
   );
 }

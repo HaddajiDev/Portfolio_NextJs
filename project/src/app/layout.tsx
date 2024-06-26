@@ -17,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <div><NavBar /></div>
+      <body className={inter.className}>      
         <div className="marg">{children}</div>
         </body>
     </html>
