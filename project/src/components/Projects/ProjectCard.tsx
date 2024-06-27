@@ -1,5 +1,9 @@
-import { useEffect } from 'react';
-import { useAnimation } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { AllProjects } from './Project';
+import Image from 'next/image';
+import arrow from '@/app/imgs/Arrow.png';
+import arrow_black from '@/app/imgs/Arrow_black.png';
 
 const useScrollAnimation = (id: any) => {
     const controls = useAnimation();
@@ -27,43 +31,35 @@ const useScrollAnimation = (id: any) => {
 
     return controls;
 };
-import React from 'react';
-import { motion } from 'framer-motion';
-import { AllProjects } from './Project';
-import Image from 'next/image';
-import arrow from '@/app/imgs/Arrow.png';
-import arrow_black from '@/app/imgs/Arrow_black.png';
 
+const Project = ({ project, arrowImg }: any) => {
+    const controls = useScrollAnimation(project.name);
 
-function ProjectCard() {    
-    const renderProjects = (projects: any) => {
-        return projects.map((el: any) => {
-            const controls = useScrollAnimation(el.name);
+    return (
+        <motion.div
+            id={project.name}
+            initial={{ x: -50, opacity: 0 }}
+            animate={controls}
+            transition={{ duration: 0.5 }}
+        >
+            <div className='project-img'>
+                <Image src={project.img} alt='' style={{ height: project.height, width: project.width }} className='img-fluid hover-target' />
+                <h2 className='project-name'>{project.name}</h2>
+                <Image src={arrowImg} alt='' width={50} className='arrow' />
+            </div>
+        </motion.div>
+    );
+};
 
-            return (
-                <motion.div
-                    key={el.name}
-                    id={el.name}
-                    initial={{ x: -50, opacity: 0 }}
-                    animate={controls}
-                    transition={{ duration: 0.5 }}
-                >
-                    <div className='project-img'>
-                        <Image src={el.img} alt='' style={{ height: el.height, width: el.width }} className='img-fluid hover-target' />
-                        <h2 className='project-name'>{el.name}</h2>
-                        <Image src={arrow} alt='' width={50} className='arrow' />
-                    </div>
-                </motion.div>
-            );
-        });
-    };
-
+const ProjectCard = () => {
     const controlsForSpecialProject = useScrollAnimation('_project');
 
     return (
         <div className='container-fluid'>
             <div className='project-holder'>
-                {renderProjects(AllProjects.filter((el) => el.name !== "E-commerce app"))}
+                {AllProjects.filter((el) => el.name !== "E-commerce app").map((el) => (
+                    <Project key={el.name} project={el} arrowImg={arrow} />
+                ))}
             </div>
             <div className='project-holder'>
                 <motion.div
@@ -81,6 +77,6 @@ function ProjectCard() {
             </div>
         </div>
     );
-}
+};
 
 export default ProjectCard;
