@@ -4,6 +4,16 @@
 body{
 	font-family: "Playwrite DE Grund", cursive !important;
 	cursor: none;
+	html, body {
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+}
+html{
+	margin: 0;
+	padding: 0;
+	height: 100% !important;
 }
 
 .logo{
@@ -54,21 +64,21 @@ body{
 	width: 100%;
 	max-width: 800px;
 	padding: 20px;
-	text-align: left;
+	text-align: left;	
   }
   
   .verticalLine {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 20px;
+	left: -20px;
 	width: 2px;
-	height: 2500px;
+	height: 5545px;
 	background-color: #5918DF;
   }
   
   .content {
-	padding-left: 40px;
+	padding-left: -40px;
   }
   
   h1 {
@@ -87,49 +97,11 @@ body{
 	letter-spacing: 2px;
   }
 
-  
- 
-
-/* components/WordRoller.module.css */
-.roller {
-    display: inline-block;
-   height: 50px !important;
-	
-    overflow: hidden;
-    position: relative;
-    vertical-align: bottom;
-  }
-  
-  .wordContainer {
-    display: flex;
-    flex-direction: column;
-    
-	width: 100%;
-    transition: transform 0.5s ease-in-out;
-    transform: translateY(0);
-  }
-  
-  .word {
-    display: block;
-    
-    
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .word.active {
-    opacity: 1;
-    position: relative;
-  }
-
 
 .section-2{
 	background-color: #1a1527;
 	width: 100%;
-	height: 1000px;
+	height: 100%;
 }
 
 .cursor {
@@ -156,14 +128,10 @@ body{
 	transform: translate(-50%, -50%);
   }
   
-.codewrp{
-	
+.codewrp{	
     font-size: 16px;
-    line-height: 1.6;
-	
-	width: 100%;
-	padding: 5%;
-	background-color:#1d1a2a;	
+    line-height: 1.6;	
+	width: 100%;		
 }
 
 .codeBlock {
@@ -173,8 +141,8 @@ body{
 	font-family: 'Fira Code', monospace;
 	font-size: 14px;
 	line-height: 1.5 !important;
-	overflow-x: auto;
-	padding-left: 500px !important;
+	overflow-x: auto;	
+	/* padding-left: 390px !important; */
 }
 
 
@@ -262,3 +230,157 @@ body{
   cursor: help;
 }
 
+.blink{
+	position: relative;
+	color: white;
+	bottom: 147px;
+	right: 170px;
+	animation: blinking 800ms infinite;
+	margin-left: 500px;	
+}
+
+
+@keyframes blinking {
+	0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.arrow{
+	position: relative;
+	bottom: 100px;
+	left: 10px;
+	transition: 500ms ease-in-out;	
+}
+
+.project-holder{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100% !important;	
+	flex-wrap: wrap;	
+	font-family: "Playwrite DE Grund", cursive !important;
+}
+
+.c2{
+	max-width: none;
+}
+.c3{
+	max-width: 2000px !important;
+	
+}
+.project-img{
+	transition: 500ms;
+	filter: brightness(60%);	
+}
+.project-img img{
+	border-radius: 3%;	
+}
+.project-img:hover{
+	transform: scale(1.1);
+	transition: 500ms ease-in;
+	filter: brightness(90%);
+}
+
+
+.project-img:hover .arrow{
+	left: 30px;
+	transition: 500ms ease-in-out;	
+}
+.project-img:hover .project-name{
+	right: 10px;
+	transition: 500ms ease-in-out;
+}
+
+.project-name{
+	position: relative;
+	bottom: 100px;
+	right: 50px;
+	color: white;	
+	width: 50%;
+	transition: 500ms ease-in-out;	
+}
+
+.black{
+	color: black !important;	
+}
+
+.links{
+	display: flex;
+	justify-content: flex-start;
+	gap: 100px;
+	align-items: center;
+	margin-top: 40px;
+}
+.link{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 15%;
+}
+
+.link img{
+	width: 25px;
+	height: 25px;
+	margin-bottom: 15px;
+	fill: #5918DF;
+}
+.find{
+	font-family: "Playwrite DE Grund", cursive !important;
+}
+.link p{
+	font-family: "Playwrite DE Grund", cursive !important;
+	color: #5918DF;
+	font-weight: 900;
+}
+
+@media (max-width: 768px) {	
+	.arrow{		
+		left: 50px;
+	}
+	.verticalLine{
+		height: 7000px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.project-name{
+		right: -29px;
+	}
+	.verticalLine{
+		height: 7000px;
+	}
+}
+
+
+
+
+
+.cursorDot {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursorCircle {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+	transition: width 0.3s ease, height 0.3s ease;
+}
+
+.cursorCircle.hovered {
+    width: 40px;
+    height: 40px;
+}
+  
