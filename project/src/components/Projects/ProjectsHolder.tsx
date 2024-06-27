@@ -5,7 +5,7 @@ import { AllProjects } from './Project'
 function ProjectsHolder() {
   return (
     <div className=''>
-        <ProjectCard el={AllProjects}/>
+        <ProjectCard/>
     </div>
   )
 }

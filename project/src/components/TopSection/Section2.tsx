@@ -30,7 +30,7 @@ function Section2() {
             </main>
             <main className="main c2">
                 <div className='content'>                    
-                    <GamesHoler el={AllGames}/>             
+                    <GamesHoler/>
                 </div>            
             </main>   
             <main className="main">
