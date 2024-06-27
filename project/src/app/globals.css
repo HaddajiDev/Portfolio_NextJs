@@ -73,7 +73,7 @@ html{
 	bottom: 0;
 	left: -20px;
 	width: 2px;
-	height: 5545px;
+	height: 5600px;
 	background-color: #5918DF;
   }
   
@@ -109,11 +109,10 @@ html{
 	width: 20px;
 	height: 20px;
 	border: 2px solid #fff;
-	border-radius: 50%;
-	 
-	pointer-events: none; /* Ensure the element doesn't interfere with mouse events */
+	border-radius: 50%;	 
+	pointer-events: none;
 	transform: translate(-50%, -50%);
-	z-index: 1000; /* Ensure it is on top of other elements */
+	z-index: 1000;
   }
   
   .cursor::before {
@@ -121,9 +120,9 @@ html{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 6px; /* Adjust inner circle size as needed */
-	height: 6px; /* Adjust inner circle size as needed */
-	background-color: #fff; /* White inner circle */
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
 	border-radius: 50%;
 	transform: translate(-50%, -50%);
   }
@@ -141,8 +140,7 @@ html{
 	font-family: 'Fira Code', monospace;
 	font-size: 14px;
 	line-height: 1.5 !important;
-	overflow-x: auto;	
-	/* padding-left: 390px !important; */
+	overflow-x: auto;
 }
 
 
@@ -383,4 +381,15 @@ html{
     width: 40px;
     height: 40px;
 }
+
+.typing {
+	border-right: 1px solid;	
+	animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+	50% {
+	  border-color: transparent;
+	}
+  }
   

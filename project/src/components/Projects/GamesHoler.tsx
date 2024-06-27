@@ -1,17 +1,43 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import {AllGames, AllGames_2, AllGames_3, AllGames_4, AllGames_5, AllProjects} from './Project';
 import Image from 'next/image';
 import arrow from '@/app/imgs/Arrow.png';
-import arrow_black from '@/app/imgs/Arrow_black.png';
 
-function GamesHoler() {
+function GamesHoler({el}:any) {
+    const controls = useAnimation();
+    useEffect(() => {
+        const handleScroll = () => {
+            const element = document.getElementById(el.name);
+            if (element) {
+                const { top } = element.getBoundingClientRect();
+                const isInView = top >= 0 && top <= window.innerHeight;
+                if (isInView) {
+                    controls.start({ x: 0, opacity: 1 });
+                } else {
+                    controls.start({ x: -20, opacity: 0 });
+                }
+            }
+        };       
+        handleScroll();        
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+
+    }, [controls]);
+
   return (
     <div className='container-fluid'>
         <div className='row'>
             <div className='project-holder'>
                 {AllGames.map((el) => 
-                    <motion.div                        
+                    <motion.div   
+                        id={el.name}
+                        initial={{x: -50, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        animate={controls}
+                        transition={{duration: 0.5}}                     
                         >
                         <div className='project-img col-sm-12 col-md-12'>
                             <Image src={el.img} alt='' width={el.width} height={el.height} className='img-fluid hover-target'/>
@@ -25,8 +51,13 @@ function GamesHoler() {
         <div className='row'>
             <div className='project-holder'>
                 {AllGames_2.map((el) =>
-                    <motion.div                        
-                        >
+                    <motion.div   
+                        id={el.name}
+                        initial={{x: -50, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        animate={controls}
+                        transition={{duration: 0.5}}                     
+                    >
                         <div className='project-img'>
                             <Image src={el.img} alt='' width={el.width} height={el.height} className='img-fluid hover-target'/>
                             <h2 className='project-name'>{el.name}</h2>
@@ -38,8 +69,13 @@ function GamesHoler() {
         </div>
         <div className='project-holder'>
             {AllGames_3.map((el) => 
-                <motion.div                        
-                    >
+                <motion.div
+                    id={el.name}
+                    initial={{x: -50, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    animate={controls}
+                    transition={{duration: 0.5}}                     
+                >
                     <div className='project-img'>
                         <Image src={el.img} alt='' width={el.width} height={el.height} className='img-fluid hover-target'/>
                         <h2 className='project-name'>{el.name}</h2>
@@ -50,8 +86,13 @@ function GamesHoler() {
         </div>
         <div className='project-holder'>
             {AllGames_4.map((el) => 
-                <motion.div                        
-                    >
+                <motion.div   
+                    id={el.name}
+                    initial={{x: -50, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    animate={controls}
+                    transition={{duration: 0.5}}                     
+                >
                     <div className='project-img'>
                         <Image src={el.img} alt='' width={el.width} height={el.height} className='img-fluid hover-target'/>
                         <h2 className='project-name'>{el.name}</h2>
@@ -62,8 +103,13 @@ function GamesHoler() {
         </div>
         <div className='project-holder'>
             {AllGames_5.map((el) => 
-                <motion.div                        
-                    >
+                <motion.div   
+                    id={el.name}
+                    initial={{x: -50, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    animate={controls}
+                    transition={{duration: 0.5}}                     
+                >
                     <div className='project-img'>
                         <Image src={el.img} alt='' width={el.width} height={el.height} className='img-fluid hover-target'/>
                         <h2 className='project-name'>{el.name}</h2>

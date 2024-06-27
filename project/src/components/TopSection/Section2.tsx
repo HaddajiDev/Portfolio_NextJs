@@ -4,6 +4,7 @@ import ProjectsHolder from '../Projects/ProjectsHolder'
 import GamesHoler from '../Projects/GamesHoler'
 import Code from '../Code'
 import Footer from '../Footer'
+import { AllGames } from '../Projects/Project'
 
 function Section2() {
   return (
@@ -29,7 +30,7 @@ function Section2() {
             </main>
             <main className="main c2">
                 <div className='content'>                    
-                    <GamesHoler />             
+                    <GamesHoler el={AllGames}/>             
                 </div>            
             </main>   
             <main className="main">
