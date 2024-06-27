@@ -31,30 +31,33 @@ const useScrollAnimation = (id: any) => {
     return controls;
 };
 
+const Project = ({ project }: any) => {
+    const controls = useScrollAnimation(project.name);
+
+    return (
+        <motion.div
+            key={project.name}
+            id={project.name}
+            initial={{ x: -50, opacity: 0 }}
+            animate={controls}
+            transition={{ duration: 0.5 }}
+        >
+            <div className='project-img col-sm-12 col-md-12'>
+                <Image src={project.img} alt={project.name} width={project.width} height={project.height} className='img-fluid hover-target' />
+                <h2 className='project-name'>{project.name}</h2>
+                <a style={{ all: 'unset' }} href={project.url} target='_blank'>
+                    <Image src={arrow} alt='arrow' width={50} className='arrow' />
+                </a>
+            </div>
+        </motion.div>
+    );
+};
+
 function GamesHoler() {
     const renderProjects = (projects: any) => {
-        return projects.map((el: any) => {
-            const controls = useScrollAnimation(el.name);
-
-            return (
-                <motion.div
-                    key={el.name}
-                    id={el.name}
-                    initial={{ x: -50, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    animate={controls}
-                    transition={{ duration: 0.5 }}
-                >
-                    <div className='project-img col-sm-12 col-md-12'>
-                        <Image src={el.img} alt={el.name} width={el.width} height={el.height} className='img-fluid hover-target' />
-                        <h2 className='project-name'>{el.name}</h2>
-                        <a style={{ all: 'unset' }} href={el.url} target='_blank'>
-                            <Image src={arrow} alt='arrow' width={50} className='arrow' />
-                        </a>
-                    </div>
-                </motion.div>
-            );
-        });
+        return projects.map((el: any) => (
+            <Project key={el.name} project={el} />
+        ));
     };
 
     return (
