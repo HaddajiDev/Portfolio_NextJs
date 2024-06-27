@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/prismjs": "^1.26.4",
     "bootstrap": "^5.3.3",
     "css-loader": "^7.1.2",
     "framer-motion": "^11.2.12",
@@ -17,7 +18,8 @@
     "react": "^18",
     "react-bootstrap": "^2.10.3",
     "react-dom": "^18",
-    "react-intersection-observer": "^9.10.3"
+    "react-intersection-observer": "^9.10.3",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "^20",

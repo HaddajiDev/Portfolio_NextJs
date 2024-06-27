@@ -2,7 +2,7 @@ import logo from '@/app/Logo.png';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
-const words = ['motion', 'webapps', 'games', 'mobile apps', 'things'];
+const words: string[] = ['motion', 'webapps', 'games', 'mobile apps', 'things'];
 
 function Section1() {    
   const [currentText, setCurrentText] = useState<string>('');

@@ -8,7 +8,7 @@ function GamesHoler({el}:any) {
     const controls = useAnimation();
     useEffect(() => {
         const handleScroll = () => {
-            const element = document.getElementById(el.name);
+            const element = document.getElementById(el[0].name);
             if (element) {
                 const { top } = element.getBoundingClientRect();
                 const isInView = top >= 0 && top <= window.innerHeight;
