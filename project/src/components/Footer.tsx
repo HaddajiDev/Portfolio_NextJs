@@ -7,7 +7,7 @@ import android from '@/app/imgs/android.png';
 
 function Footer() {
   return (
-    <div>
+    <div className='container-fluid'>
         <h5 className='find'>Find me on</h5>
         <div className='links'>
             <div className='hover-target link'>

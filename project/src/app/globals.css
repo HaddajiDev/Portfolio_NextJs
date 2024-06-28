@@ -336,8 +336,21 @@ html{
 	.arrow{		
 		left: 50px;
 	}
+	.links{
+		flex-direction: column;
+		gap: 0;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.link{
+		width: 25%;
+	}
 	.verticalLine{
 		height: 7000px;
+	}
+
+	.title{
+		font-size: 25px;
 	}
 }
 
