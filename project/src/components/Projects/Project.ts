@@ -41,9 +41,9 @@ class project implements projects{
 	}
 }
 
-const project_Agence: project = new project("Agency app", agence, "ss", 600, 300);
-const project_weather: project = new project("Weather app", weather, "ss", 600, 300);
-const project_store: project = new project("E-commerce app", store, "ss", 600, 300);
+const project_Agence: project = new project("Agency app", agence, "https://github.com/HaddajiDev/Agency_W_React_PostgreSQL", 600, 300);
+const project_weather: project = new project("Weather app", weather, "https://github.com/HaddajiDev/Weather_App", 600, 300);
+const project_store: project = new project("E-commerce app", store, "https://github.com/HaddajiDev/Store", 600, 300);
 
 const AllProjects : Array<project> = [project_Agence, project_weather, project_store];
 

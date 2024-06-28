@@ -43,9 +43,9 @@ const Project = ({ project, arrowImg }: any) => {
             transition={{ duration: 0.5 }}
         >
             <div className='project-img'>
-                <Image src={project.img} alt='' style={{ height: project.height, width: project.width }} className='img-fluid hover-target' />
+                <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={project.img} alt='' style={{ height: project.height, width: project.width }} className='img-fluid hover-target' /></a>
                 <h2 className='project-name'>{project.name}</h2>
-                <Image src={arrowImg} alt='' width={50} className='arrow' />
+                <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={arrowImg} alt='' width={50} className='arrow' /></a>
             </div>
         </motion.div>
     );
@@ -69,9 +69,9 @@ const ProjectCard = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <div className='project-img'>
-                        <Image src={AllProjects[2].img} alt='' style={{ height: AllProjects[2].height, width: AllProjects[2].width }} className='img-fluid hover-target' />
+                        <a style={{ all: 'unset' }} href={AllProjects[2].url} target='_blank'><Image src={AllProjects[2].img} alt='' style={{ height: AllProjects[2].height, width: AllProjects[2].width }} className='img-fluid hover-target' /></a>
                         <h2 className='project-name black'>{AllProjects[2].name}</h2>
-                        <Image src={arrow_black} alt='' width={50} className='arrow hover-target' />
+                        <a style={{ all: 'unset' }} href={AllProjects[2].url} target='_blank'><Image src={arrow_black} alt='' width={50} className='arrow' /></a>
                     </div>
                 </motion.div>
             </div>

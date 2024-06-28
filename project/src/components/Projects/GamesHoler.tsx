@@ -43,7 +43,7 @@ const Project = ({ project }: any) => {
             transition={{ duration: 0.5 }}
         >
             <div className='project-img col-sm-12 col-md-12'>
-                <Image src={project.img} alt={project.name} width={project.width} height={project.height} className='img-fluid hover-target' />
+                <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={project.img} alt={project.name} width={project.width} height={project.height} className='img-fluid hover-target' /></a>
                 <h2 className='project-name'>{project.name}</h2>
                 <a style={{ all: 'unset' }} href={project.url} target='_blank'>
                     <Image src={arrow} alt='arrow' width={50} className='arrow' />
