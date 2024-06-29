@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { AllGames, AllGames_2, AllGames_3, AllGames_4, AllGames_5 } from './Project';
 import Image from 'next/image';
@@ -6,6 +6,7 @@ import arrow from '@/app/imgs/Arrow.png';
 
 const useScrollAnimation = (id: any) => {
     const controls = useAnimation();
+    const [hasAnimated, setHasAnimated] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,10 +14,9 @@ const useScrollAnimation = (id: any) => {
             if (element) {
                 const { top } = element.getBoundingClientRect();
                 const isInView = top >= 0 && top <= window.innerHeight;
-                if (isInView) {
+                if (isInView && !hasAnimated) {
                     controls.start({ x: 0, opacity: 1 });
-                } else {
-                    controls.start({ x: -50, opacity: 0 });
+                    setHasAnimated(true);
                 }
             }
         };
@@ -26,7 +26,7 @@ const useScrollAnimation = (id: any) => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [controls, id]);
+    }, [controls, hasAnimated, id]);
 
     return controls;
 };
