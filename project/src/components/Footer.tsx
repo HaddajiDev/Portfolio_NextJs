@@ -12,7 +12,7 @@ function Footer() {
         <div className='links'>
             <div className='hover-target link'>
                 <a href='https://haddajidev.itch.io/' target='_blank' style={{all: 'unset'}}><Image src={itch} alt=''/></a>
-                <a href='https://haddajidev.itch.io/' target='_blank' style={{all: 'unset'}}><p>Itch io</p></a>
+                <a href='https://haddajidev.itch.io/' target='_blank' style={{all: 'unset'}}><p>ItchIo</p></a>
             </div>
             <div className='hover-target link' >
                 <a href='https://www.linkedin.com/in/ahmed-haddaji-b70953299/' target='_blank' style={{all: 'unset'}}><Image src={linki} alt=''/></a>

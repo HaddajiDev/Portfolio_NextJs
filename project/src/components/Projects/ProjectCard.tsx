@@ -42,10 +42,16 @@ const Project = ({ project, arrowImg }: any) => {
             animate={controls}
             transition={{ duration: 0.5 }}
         >
-            <div className='project-img'>
+            <div className='project-img col-sm-12 col-md-12'>
                 <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={project.img} alt='' style={{ height: project.height, width: project.width }} className='img-fluid hover-target' /></a>
-                <h2 className='project-name'>{project.name}</h2>
-                <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={arrowImg} alt='' width={50} className='arrow' /></a>
+                {project.name == "E-commerce app" || project.name == "Savage Blog"
+                    ?<h2 className='project-name black'>{project.name}</h2>
+                    :<h2 className='project-name'>{project.name}</h2>
+                }
+                {project.name == "E-commerce app" || project.name == "Savage Blog"
+                ?   <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={arrow_black} alt='' width={50} className='arrow' /></a>
+                :   <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={arrowImg} alt='' width={50} className='arrow' /></a>
+                }
             </div>
         </motion.div>
     );
@@ -56,25 +62,51 @@ const ProjectCard = () => {
 
     return (
         <div className='container-fluid'>
-            <div className='project-holder'>
-                {AllProjects.filter((el) => el.name !== "E-commerce app").map((el) => (
-                    <Project key={el.name} project={el} arrowImg={arrow} />
-                ))}
+            <div className='row'>
+                <div className='project-holder'>
+                    {AllProjects.filter((el) => el.name !== "E-commerce app" && el.name !== "Savage Blog").map((el) => (
+                        <Project key={el.name} project={el} arrowImg={arrow} />
+                    ))}
+                </div>
             </div>
-            <div className='project-holder'>
-                <motion.div
-                    id='_project'
-                    initial={{ x: -50, opacity: 0 }}
-                    animate={controlsForSpecialProject}
-                    transition={{ duration: 0.5 }}
-                >
-                    <div className='project-img'>
-                        <a style={{ all: 'unset' }} href={AllProjects[2].url} target='_blank'><Image src={AllProjects[2].img} alt='' style={{ height: AllProjects[2].height, width: AllProjects[2].width }} className='img-fluid hover-target' /></a>
-                        <h2 className='project-name black'>{AllProjects[2].name}</h2>
-                        <a style={{ all: 'unset' }} href={AllProjects[2].url} target='_blank'><Image src={arrow_black} alt='' width={50} className='arrow' /></a>
-                    </div>
-                </motion.div>
+            <div className='row'>
+                <div className='project-holder'>
+                    {AllProjects.filter((el) => el.name !== "Agency app" && el.name !== "Weather app").map((el) => (
+                        <Project key={el.name} project={el} arrowImg={arrow} />
+                    ))}
+                </div>
             </div>
+            {/* <div style={{display: 'flex'}}>
+                <div className='project-holder'>
+                    <motion.div
+                        id='_project'
+                        initial={{ x: -50, opacity: 0 }}
+                        animate={controlsForSpecialProject}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <div className='project-img'>
+                            <a style={{ all: 'unset' }} href={AllProjects[2].url} target='_blank'><Image src={AllProjects[2].img} alt='' style={{ height: AllProjects[2].height, width: AllProjects[2].width }} className='img-fluid hover-target' /></a>
+                            <h2 className='project-name black'>{AllProjects[2].name}</h2>
+                            <a style={{ all: 'unset' }} href={AllProjects[2].url} target='_blank'><Image src={arrow_black} alt='' width={50} className='arrow' /></a>
+                        </div>
+                    </motion.div>
+                </div>
+                <div className='project-holder'>
+                    <motion.div
+                        id='_project'
+                        initial={{ x: -50, opacity: 0 }}
+                        animate={controlsForSpecialProject}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <div className='project-img'>
+                            <a style={{ all: 'unset' }} href={AllProjects[3].url} target='_blank'><Image src={AllProjects[3].img} alt='' style={{ height: AllProjects[3].height, width: AllProjects[3].width }} className='img-fluid hover-target' /></a>
+                            <h2 className='project-name black'>{AllProjects[3].name}</h2>
+                            <a style={{ all: 'unset' }} href={AllProjects[3].url} target='_blank'><Image src={arrow_black} alt='' width={50} className='arrow' /></a>
+                        </div>
+                    </motion.div>
+                </div>
+            </div> */}
+            
         </div>
     );
 };
