@@ -15,7 +15,7 @@ function Code() {
 01       class Ahmed_Haddaji {
 02         constructor() {
 03           this.name = 'Ahmed Haddaji';
-04           this.age = '20';
+04           this.age = '21';
 05           this.email = 'ahmedhaddajiahmed@gmail.com';
 06         }
 07       
@@ -35,12 +35,12 @@ function Code() {
 21 
 22         skills() {
 23           return [
-24             'HTML', 'Rust', 'Node.js', 'CSS', 'Bootstrap',
+24             'HTML', 'CSS', 'Node.js', 'Bootstrap', 'SCSS/Less',
 25             'Tailwind', 'javaScript', 'Python', 'C', 'C++',
-26             'SCSS/Less', 'npm/yarn/pnpm', 'SQL', 'PostgreSQL',
+26             'npm/yarn/pnpm', 'TypeScript', 'SQL', 'PostgreSQL',
 27             'React', 'Nextjs', 'Unity', 'C#', 'PHP', 'MongoDB',
 28             'MySQL', 'PlayFab', 'Photoshop', 'Motion design',
-29             'TypeScript', 'java', 'Android Studio', 'Git',
+29             'Rust', 'java', 'Android Studio', 'Git',
 30             'Godot', 'GDScript'
 31           ];
 32         }

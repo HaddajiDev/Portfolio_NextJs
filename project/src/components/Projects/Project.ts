@@ -20,6 +20,9 @@ import tank from '@/app/imgs/tank.png';
 
 import blog from '@/app/imgs/blog.png';
 
+import merge from '@/app/imgs/Merge.png';
+import pirate from '@/app/imgs/PirateDuel.png';
+
 interface projects{
     name: string,
     img: StaticImageData,
@@ -72,4 +75,9 @@ const AllGames_4: Array<project> = [project_wizard, project_cave, project_clicke
 const project_bomb: project = new project("Bomb Skipper", bomb, "https://haddajidev.itch.io/bomb-skipper", 600, 300);
 const project_tank: project = new project("Tank Showdown", tank, "https://haddajidev.itch.io/tank-showdown", 600, 300);
 const AllGames_5 : Array<project> = [project_bomb, project_tank];
-export {AllProjects, AllGames, AllGames_2, AllGames_3, AllGames_4, AllGames_5};
+
+
+const merge_Ball: project = new project("Balls Merge", merge, "https://haddajidev.itch.io/balls-merge", 600, 300);
+const Pirate_Duel: project = new project("Pirate's Dual", pirate, "https://haddajidev.itch.io/pirates-dual", 600, 300);
+const AllGames_6 : Array<project> = [merge_Ball, Pirate_Duel];
+export {AllProjects, AllGames, AllGames_2, AllGames_3, AllGames_4, AllGames_5, AllGames_6};

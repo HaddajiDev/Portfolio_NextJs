@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { AllGames, AllGames_2, AllGames_3, AllGames_4, AllGames_5 } from './Project';
+import { AllGames, AllGames_2, AllGames_3, AllGames_4, AllGames_5, AllGames_6 } from './Project';
 import Image from 'next/image';
 import arrow from '@/app/imgs/Arrow.png';
 
@@ -80,6 +80,9 @@ function GamesHoler() {
             </div>
             <div className='project-holder'>
                 {renderProjects(AllGames_5)}
+            </div>
+            <div className='project-holder'>
+                {renderProjects(AllGames_6)}
             </div>
         </div>
     );
