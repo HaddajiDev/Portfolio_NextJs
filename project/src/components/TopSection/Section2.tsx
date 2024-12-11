@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectCard from '../Projects/ProjectCard'
 import ProjectsHolder from '../Projects/ProjectsHolder'
-import GamesHoler from '../Projects/GamesHoler'
+import GamesHoler from '../Projects/GamesHolder'
 import Code from '../Code'
 import Footer from '../Footer'
 import { AllGames } from '../Projects/Project'

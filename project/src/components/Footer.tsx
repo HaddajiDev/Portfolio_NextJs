@@ -3,6 +3,7 @@ import itch from '@/app/imgs/itch.png';
 import Image from 'next/image';
 import linki from '@/app/imgs/link.png';
 import git from '@/app/imgs/git.png';
+import discord from '@/app/imgs/discord.png';
 
 function Footer() {
   return (
@@ -20,6 +21,10 @@ function Footer() {
             <div className='hover-target link'>
                 <a href='https://github.com/HaddajiDev/' target='_blank' style={{all: 'unset'}}><Image src={git} alt=''/></a>
                 <a href='https://github.com/HaddajiDev' target='_blank' style={{all: 'unset'}}><p>GitHub</p></a>
+            </div>
+            <div className='hover-target link'>
+                <a href='https://discord.com/users/767083087338274866' target='_blank' style={{all: 'unset'}}><Image src={discord} alt=''/></a>
+                <a href='https://discord.com/users/767083087338274866' target='_blank' style={{all: 'unset'}}><p>Discord</p></a>
             </div>
         </div>        
         <p className='mt-5 point-sec'>© Made with &lt;/&gt; by Ahmed Haddaji. Tunisia 2024.</p>
