@@ -23,6 +23,9 @@ import blog from '@/app/imgs/blog.png';
 import merge from '@/app/imgs/Merge.png';
 import pirate from '@/app/imgs/PirateDuel.png';
 
+import files from '@/app/imgs/files.png';
+
+
 interface projects{
     name: string,
     img: StaticImageData,
@@ -50,8 +53,9 @@ const project_Agence: project = new project("Agency app", agence, "https://githu
 const project_weather: project = new project("Weather app", weather, "https://github.com/HaddajiDev/Weather_App", 600, 300);
 const project_store: project = new project("E-commerce app", store, "https://ecommerce-front-pi-blue.vercel.app/", 600, 300);
 const project_blog: project = new project("Savage Blog", blog, "https://savageblog.vercel.app/", 600, 300);
+const project_files: project = new project("Savage Files", files, "https://savge-files.vercel.app/", 600, 300);
 
-const AllProjects : Array<project> = [project_Agence,project_weather, project_store, project_blog];
+const AllProjects : Array<project> = [project_Agence,project_weather, project_store, project_blog, project_files];
 
 const project_gems: project = new project("Gems Rush", gems, "https://play.google.com/store/apps/details?id=com.haddajiDev.pirategemrush", 250, 450);
 const project_sliding: project = new project("Sliding puzzle", slding, "https://play.google.com/store/apps/details?id=com.haddajidev.slidingpuzzle", 250, 450);

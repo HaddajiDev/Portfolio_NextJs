@@ -44,11 +44,11 @@ const Project = ({ project, arrowImg }: any) => {
         >
             <div className='project-img col-sm-12 col-md-12'>
                 <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={project.img} alt='' style={{ height: project.height, width: project.width }} className='img-fluid hover-target' /></a>
-                {project.name == "E-commerce app" || project.name == "Savage Blog"
+                {project.name == "E-commerce app" || project.name == "Savage Blog"|| project.name == "Savage Files"
                     ?<h2 className='project-name black'>{project.name}</h2>
                     :<h2 className='project-name'>{project.name}</h2>
                 }
-                {project.name == "E-commerce app" || project.name == "Savage Blog"
+                {project.name == "E-commerce app" || project.name == "Savage Blog" || project.name == "Savage Files"
                 ?   <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={arrow_black} alt='' width={50} className='arrow' /></a>
                 :   <a style={{ all: 'unset' }} href={project.url} target='_blank'><Image src={arrowImg} alt='' width={50} className='arrow' /></a>
                 }
@@ -64,14 +64,21 @@ const ProjectCard = () => {
         <div className='container-fluid'>
             <div className='row'>
                 <div className='project-holder'>
-                    {AllProjects.filter((el) => el.name !== "E-commerce app" && el.name !== "Savage Blog").map((el) => (
+                    {AllProjects.filter((el) => el.name !== "E-commerce app" && el.name !== "Savage Blog" && el.name !== "Savage Files").map((el) => (
                         <Project key={el.name} project={el} arrowImg={arrow} />
                     ))}
                 </div>
             </div>
             <div className='row'>
                 <div className='project-holder'>
-                    {AllProjects.filter((el) => el.name !== "Agency app" && el.name !== "Weather app").map((el) => (
+                    {AllProjects.filter((el) => el.name !== "Agency app" && el.name !== "Weather app"  && el.name !== "Savage Files").map((el) => (
+                        <Project key={el.name} project={el} arrowImg={arrow} />
+                    ))}
+                </div>
+            </div>
+            <div className='row'>
+                <div className='project-holder'>
+                    {AllProjects.filter((el) => el.name !== "Agency app" && el.name !== "Weather app" && el.name !== "E-commerce app" && el.name !== "Savage Blog").map((el) => (
                         <Project key={el.name} project={el} arrowImg={arrow} />
                     ))}
                 </div>
