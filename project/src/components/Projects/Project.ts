@@ -53,7 +53,7 @@ const project_Agence: project = new project("Agency app", agence, "https://githu
 const project_weather: project = new project("Weather app", weather, "https://github.com/HaddajiDev/Weather_App", 600, 300);
 const project_store: project = new project("E-commerce app", store, "https://ecommerce-front-pi-blue.vercel.app/", 600, 300);
 const project_blog: project = new project("Savage Blog", blog, "https://savageblog.vercel.app/", 600, 300);
-const project_files: project = new project("Savage Files", files, "https://savge-files.vercel.app/", 600, 300);
+const project_files: project = new project("Savage Files", files, "https://savage-files.vercel.app", 600, 300);
 
 const AllProjects : Array<project> = [project_Agence,project_weather, project_store, project_blog, project_files];
 
