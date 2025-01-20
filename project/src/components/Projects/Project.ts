@@ -49,8 +49,8 @@ class project implements projects{
 	}
 }
 
-const project_Agence: project = new project("Agency app", agence, "https://github.com/HaddajiDev/Agency_W_React_PostgreSQL", 600, 300);
-const project_weather: project = new project("Weather app", weather, "https://github.com/HaddajiDev/Weather_App", 600, 300);
+const project_Agence: project = new project("Agency app", agence, "https://agencyahmed.vercel.app/", 600, 300);
+const project_weather: project = new project("Weather app", weather, "https://weather-app-five-ruby-57.vercel.app/", 600, 300);
 const project_store: project = new project("E-commerce app", store, "https://ecommerce-front-pi-blue.vercel.app/", 600, 300);
 const project_blog: project = new project("Savage Blog", blog, "https://savageblog.vercel.app/", 600, 300);
 const project_files: project = new project("Savage Files", files, "https://savage-files.vercel.app", 600, 300);
