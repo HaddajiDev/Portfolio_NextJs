@@ -61,7 +61,7 @@ const project_weather: project = new project("Weather app", weather, "https://we
 const project_store: project = new project("E-commerce app", store, "https://ecommerce-front-pi-blue.vercel.app/", 600, 300, 2, "black");
 const project_blog: project = new project("Savage Blog", blog, "https://savageblog.vercel.app/", 600, 300, 2, "black");
 const project_files: project = new project("Savage Files", files, "https://savage-files.vercel.app", 600, 300, 3, "black");
-const project_savageai: project = new project("Savage AI", ai, "https://savageai-front.vercel.app/", 600, 300, 3, "white");
+const project_savageai: project = new project("Savage AI", ai, "https://savageai.vercel.app", 600, 300, 3, "white");
 
 const AllProjects : Array<project> = [project_Agence,project_weather, project_store, project_blog, project_files, project_savageai];
 
