@@ -26,6 +26,7 @@ import pirate from '@/app/imgs/PirateDuel.png';
 import files from '@/app/imgs/files.png';
 
 import ai from '@/app/imgs/ai.png';
+import talk from '@/app/imgs/talk.png';
 
 
 class project {
@@ -59,11 +60,12 @@ class project {
 const project_Agence: project = new project("Agency app", agence, "https://agencyahmed.vercel.app/", 600, 300, 1, "white");
 const project_weather: project = new project("Weather app", weather, "https://weather-app-five-ruby-57.vercel.app/", 600, 300, 1, "black");
 const project_store: project = new project("E-commerce app", store, "https://ecommerce-front-pi-blue.vercel.app/", 600, 300, 2, "black");
-const project_blog: project = new project("Savage Blog", blog, "https://savageblog.vercel.app/", 600, 300, 2, "black");
-const project_files: project = new project("Savage Files", files, "https://savage-files.vercel.app", 600, 300, 3, "black");
-const project_savageai: project = new project("Savage AI", ai, "https://savageai.vercel.app", 600, 300, 3, "white");
+const project_blog: project = new project("Savage Blog", blog, "https://savageblog.vercel.app/", 600, 300, 3, "black");
+const project_talk: project = new project("Savage Talk", talk, "https://savage-talk.vercel.app/", 600, 300, 3, "black");
+const project_files: project = new project("Savage Files", files, "https://savage-files.vercel.app", 600, 300, 4, "black");
+const project_savageai: project = new project("Savage AI", ai, "https://savageai.vercel.app", 600, 300, 4, "white");
 
-const AllProjects : Array<project> = [project_Agence,project_weather, project_store, project_blog, project_files, project_savageai];
+const AllProjects : Array<project> = [project_Agence,project_weather, project_store, project_blog, project_talk, project_files, project_savageai];
 
 // Games
 interface projects{
